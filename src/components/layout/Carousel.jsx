@@ -32,9 +32,9 @@ export const Carousel = () => {
   return (
     <div className="mt-[100px] max-w-screen-xl mx-auto">
       {/* Carousel */}
-      <div className="flex max-w-[1216px] h-[651px] overflow-hidden rounded-xl mx-auto relative">
+      <div className="flex w-full h-[350px] sm:h-[450px] md:h-[550px] lg:max-w-[1216px] lg:h-[651px] overflow-hidden rounded-xl mx-auto relative">
         {carousel.map((el, index) => (
-          <Link href={{pathname: "/SinglePost", query: { id: el.id }}}>
+          <Link href={{ pathname: "/SinglePost", query: { id: el.id } }}>
             <div
               key={index}
               className="transition-transform ease-out duration-500"

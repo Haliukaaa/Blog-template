@@ -9,7 +9,7 @@ export const Header = () => {
     <div className="max-w-screen-xl mx-auto container">
       <div className="flex justify-between py-8 items-center pr-[87px]">
         {/* Header Logo */}
-        <Link href={{ pathname: "/"}}>
+        <Link href={{ pathname: "/" }}>
           <div>
             <svg
               width="158"
@@ -78,15 +78,28 @@ export const Header = () => {
           </div>
         </Link>
         {/* Menu */}
-        <div>
+        <div className="hidden md:visible">
           <ul className="flex gap-10 text-color">
-            <Link href="/"><li className="hover:text-yellow-500 hover:scale-105 transition-all">Home</li></Link>
-            <Link href={{pathname: "/AllBlog"}}> <li className="hover:text-yellow-500 hover:scale-105 transition-all">Blog</li></Link>
-            <Link href={{pathname: "/Contact"}}><li className="hover:text-yellow-500 hover:scale-105 transition-all">Contact</li></Link>
+            <Link href="/">
+              <li className="hover:text-yellow-500 hover:scale-105 transition-all">
+                Home
+              </li>
+            </Link>
+            <Link href={{ pathname: "/AllBlog" }}>
+              {" "}
+              <li className="hover:text-yellow-500 hover:scale-105 transition-all">
+                Blog
+              </li>
+            </Link>
+            <Link href={{ pathname: "/Contact" }}>
+              <li className="hover:text-yellow-500 hover:scale-105 transition-all">
+                Contact
+              </li>
+            </Link>
           </ul>
         </div>
         {/* Search bar */}
-        <div className="relative flex justify-end items-center">
+        <div className="relative md:flex justify-end items-center hidden md:visible">
           <div className="w-[166px] bg-slate-100 py-2 pl-2 pr-4 h-[36px] rounded-[5px] flex justify-start items-center">
             <input
               onChange={handleSearch}

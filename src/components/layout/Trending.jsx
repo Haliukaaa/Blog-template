@@ -12,11 +12,11 @@ export const Trending = () => {
       <div>
         <Title text="Trending" />
       </div>
-      <div className="flex gap-3 mt-10">
+      <div className="flex gap-3 mt-10 overflow-x-auto md:overflow-hidden">
         {trending.map((el) => {
           return (
             <Link href={{ pathname: "/SinglePost", query: { id: el.id } }}>
-              <div className="relative w-[295px] h-[320px] overflow-hidden rounded-xl">
+              <div className="relative w-[305px] h-[320px] overflow-hidden rounded-xl">
                 {/* text container */}
                 <div className="absolute z-[1] bottom-0 p-8">
                   <div className="flex flex-col gap-3 overflow-hidden transition-transform duration-300 transform hover:overflow-visible hover:-translate-y-2/4">
