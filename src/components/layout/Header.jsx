@@ -78,7 +78,7 @@ export const Header = () => {
           </div>
         </Link>
         {/* Menu */}
-        <div className="hidden md:visible">
+        <div>
           <ul className="flex gap-10 text-color">
             <Link href="/">
               <li className="hover:text-yellow-500 hover:scale-105 transition-all">

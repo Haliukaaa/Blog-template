@@ -32,7 +32,7 @@ export const Carousel = () => {
   return (
     <div className="mt-[100px] max-w-screen-xl mx-auto">
       {/* Carousel */}
-      <div className="flex w-full h-[350px] sm:h-[450px] md:h-[550px] lg:max-w-[1216px] lg:h-[651px] overflow-hidden rounded-xl mx-auto relative">
+      <div className="flex w-full h-[350px] sm:h-[450px] md:h-[550px] max-w-[1216px] lg:h-[651px] overflow-hidden rounded-xl mx-auto relative">
         {carousel.map((el, index) => (
           <Link href={{ pathname: "/SinglePost", query: { id: el.id } }}>
             <div
@@ -41,9 +41,9 @@ export const Carousel = () => {
               style={{ transform: `translateX(-${current * 100}%)` }}
             >
               {/* text container */}
-              <div className="absolute bg-white bottom-3 left-3 min-h-[250px] hover:h-auto z-[1] w-1/2 p-10 rounded-xl border border-slate-200 flex flex-col justify-between">
+              <div className="absolute bg-black bg-opacity-20 bottom-[302px] sm:w-2/5 md:w-1/2 md:bg-white h-[200px] md:left-3 sm:bottom-52 sm:left-1 md:bottom-28 lg:bottom-3 md:min-h-[250px] hover:h-auto z-[1] p-10 rounded-xl md:border border-slate-200 flex flex-col gap-5 md:justify-between">
                 <Button buttonText={el.tag_list[0] || "news"} />
-                <h1 className="text-4xl font-semibold overflow-hidden max-h-[80px] hover:max-h-fit hover:overflow-visible">
+                <h1 className="text-2xl text-white md:text-black md:text-3xl lg:text-4xl h-fit font-semibold sm:overflow-hidden hover:max-h-fit hover:overflow-visible">
                   {el.title}
                 </h1>
                 <p className="text-gray-400">{el.readable_publish_date}</p>
